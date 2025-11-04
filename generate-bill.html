@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate Bill - UMS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        
+        <!-- --- Sidebar Navigation (Cashier) --- -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h3>UMS Cashier</h3>
+            </div>
+            <!-- Updated simplified sidebar -->
+            <nav class="sidebar-nav">
+                <a href="cashier-dashboard.html" class="nav-item">Outstanding Bills</a>
+                <a href="generate-bill.html" class="nav-item active">Generate Bill</a>
+                <a href="login.html" class="nav-item">Logout</a>
+            </nav>
+        </aside>
+
+        <!-- --- Main Content Area --- -->
+        <main class="main-content">
+            <header class="main-header">
+                <h1>Generate Customer Bill</h1>
+                <div class="user-profile">
+                    <span>Billing Clerk</span>
+                </div>
+            </header>
+
+            <div class="content-area">
+                
+                <div class="form-container">
+                    <h3>Generate Bill Manually</h3>
+                    <p>Select a customer and billing period to generate a new bill.</p>
+                    
+                    <form class="data-form">
+                        <div class="form-grid">
+                            <div class="input-group form-span-2">
+                                <label for="customer-id">Select Customer <span class="required-star">*</span></label>
+                                <select id="customer-id" name="customer-id" required>
+                                    <option value="" disabled selected>Search for a customer...</option>
+                                    <option value="CUST-001">CUST-001: John Doe</option>
+                                    <option value="CUST-002">CUST-002: ABC Holdings PLC</option>
+                                    <option value="CUST-003">CUST-003: Ministry of Education</option>
+                                </select>
+                            </div>
+
+                            <div class="input-group">
+                                <label for="billing-month">Billing Month <span class="required-star">*</span></label>
+                                <input type="month" id="billing-month" name="billing-month" required>
+                            </div>
+
+                            <div class="input-group">
+                                <label for="due-date">Due Date <span class="required-star">*</span></label>
+                                <input type="date" id="due-date" name="due-date" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="submit" class="submit-button">Generate Bill</button>
+                        </div>
+                    </form>
+                </div>
+                
+            </div>
+        </main>
+    </div>
+</body>
+</html>
+

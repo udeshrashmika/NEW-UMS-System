@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meter Management - UMS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        
+        <!-- --- Sidebar Navigation --- -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h3>UMS Admin</h3>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="admin-dashboard.html" class="nav-item">Dashboard</a>
+                <a href="customer-management.html" class="nav-item">Customer Management</a>
+                <a href="meter-management.html" class="nav-item active">Meter Management</a>
+                <a href="tariff-plans.html" class="nav-item">Tariff Plans</a>
+                <a href="admin-billing.html" class="nav-item">Billing & Payments</a>
+                <a href="manager-dashboard.html" class="nav-item">Reports</a>
+                <a href="login.html" class="nav-item">Logout</a>
+            </nav>
+        </aside>
+
+        <!-- --- Main Content Area --- -->
+        <main class="main-content">
+            <header class="main-header">
+                <h1>Meter Management</h1>
+                <div class="user-profile">
+                    <span>Admin Staff</span>
+                </div>
+            </header>
+
+            <div class="content-area">
+                
+                <div class="table-container">
+                    <div class="table-header">
+                        <h3>All Registered Meters</h3>
+                        <a href="add-meter.html" class="btn-add-new">+ Add New Meter</a>
+                    </div>
+                    
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Meter ID</th>
+                                <th>Customer ID</th>
+                                <th>Utility Type</th>
+                                <th>Status</th>
+                                <th>Location (Service Address)</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Sample data for meter management -->
+                            <tr>
+                                <td>MTR-E-001</td>
+                                <td>CUST-001</td>
+                                <td>Electricity</td>
+                                <td><span class="status-tag status-active">Active</span></td>
+                                <td>123 Galle Rd, Colombo 03</td>
+                                <td>
+                                    <a href="edit-meter.html">
+                                        <button class="btn-action btn-edit">Edit</button>
+                                    </a>
+                                    <button class="btn-action btn-delete">Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>MTR-W-001</td>
+                                <td>CUST-001</td>
+                                <td>Water</td>
+                                <td><span class="status-tag status-active">Active</span></td>
+                                <td>123 Galle Rd, Colombo 03</td>
+                                <td>
+                                    <a href="edit-meter.html">
+                                        <button class="btn-action btn-edit">Edit</button>
+                                    </a>
+                                    <button class="btn-action btn-delete">Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>MTR-E-002</td>
+                                <td>CUST-002</td>
+                                <td>Electricity</td>
+                                <td><span class="status-tag status-active">Active</span></td>
+                                <td>45 Main St, Kandy</td>
+                                <td>
+                                    <a href="edit-meter.html">
+                                        <button class="btn-action btn-edit">Edit</button>
+                                    </a>
+                                    <button class="btn-action btn-delete">Delete</button>
+                                </td>
+                            </tr>
+                             <tr>
+                                <td>MTR-G-001</td>
+                                <td>CUST-002</td>
+                                <td>Gas</td>
+                                <td><span class="status-tag status-pending">Pending Install</span></td>
+                                <td>45 Main St, Kandy</td>
+                                <td>
+                                    <a href="edit-meter.html">
+                                        <button class="btn-action btn-edit">Edit</button>
+                                    </a>
+                                    <button class="btn-action btn-delete">Delete</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+            </div>
+        </main>
+    </div>
+</body>
+</html>

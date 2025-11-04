@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cashier Dashboard - UMS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        
+        <!-- --- Sidebar Navigation (Cashier) --- -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h3>UMS Cashier</h3>
+            </div>
+            <!-- Updated simplified sidebar -->
+            <nav class="sidebar-nav">
+                <a href="cashier-dashboard.html" class="nav-item active">Outstanding Bills</a>
+                <a href="generate-bill.html" class="nav-item">Generate Bill</a>
+                <a href="login.html" class="nav-item">Logout</a>
+            </nav>
+        </aside>
+
+        <!-- --- Main Content Area --- -->
+        <main class="main-content">
+            <header class="main-header">
+                <h1>Welcome, Cashier</h1>
+                <div class="user-profile">
+                    <span>Billing Clerk</span>
+                </div>
+            </header>
+
+            <div class="content-area">
+                
+                <div class="table-container">
+                    <div class="table-header">
+                        <h3>Outstanding Bills</h3>
+                        <!-- The "+ Record Payment" button has been removed -->
+                    </div>
+                    
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Bill ID</th>
+                                <th>Customer ID</th>
+                                <th>Customer Name</th>
+                                <th>Bill Date</th>
+                                <th>Due Date</th>
+                                <th>Amount Due (Rs.)</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>BILL-1050</td>
+                                <td>CUST-001</td>
+                                <td>John Doe</td>
+                                <td>2025-10-20</td>
+                                <td>2025-11-05</td>
+                                <td>3,450.00</td>
+                                <td>
+                                    <!-- This button is now a link to the form -->
+                                    <a href="record-payment.html">
+                                        <button class="btn-action btn-edit">Record Payment</button>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>BILL-1051</td>
+                                <td>CUST-002</td>
+                                <td>ABC Holdings PLC</td>
+                                <td>2025-10-20</td>
+                                <td>2025-11-05</td>
+                                <td>78,200.00</td>
+                                <td>
+                                    <a href="record-payment.html">
+                                        <button class="btn-action btn-edit">Record Payment</button>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>BILL-1048</td>
+                                <td>CUST-003</td>
+                                <td>Ministry of Education</td>
+                                <td>2025-10-19</td>
+                                <td>2025-11-04</td>
+                                <td>150,000.00</td>
+                                <td>
+                                    <a href="record-payment.html">
+                                        <button class="btn-action btn-edit">Record Payment</button>
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+            </div>
+        </main>
+    </div>
+</body>
+</html>

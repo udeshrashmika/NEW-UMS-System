@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revenue Trends - UMS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        
+        <!-- --- Sidebar Navigation (Manager) --- -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h3>UMS Manager</h3>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="manager-dashboard.html" class="nav-item">Reports Dashboard</a>
+                <a href="revenue-trends.html" class="nav-item active">Revenue Trends</a>
+                <a href="defaulters-list.html" class="nav-item">Defaulters List</a>
+                <a href="usage-patterns.html" class="nav-item">Usage Patterns</a>
+                <a href="login.html" class="nav-item">Logout</a>
+            </nav>
+        </aside>
+
+        <!-- --- Main Content Area --- -->
+        <main class="main-content">
+            <header class="main-header">
+                <h1>Revenue Trends</h1>
+                <div class="user-profile">
+                    <span>Decision Maker</span>
+                </div>
+            </header>
+
+            <div class="content-area">
+                
+                <!-- Chart placeholder -->
+                <div class="chart-container">
+                    <h3>Monthly Revenue (Last 6 Months)</h3>
+                    <!-- This is a placeholder image for the chart -->
+                    <img src="https://placehold.co/900x400/3498db/white?text=Monthly+Revenue+Chart" 
+                         alt="Monthly Revenue Chart Placeholder">
+                </div>
+
+                <!-- Spacer -->
+                <div style="height: 30px;"></div>
+
+                <!-- Data table with the chart's data -->
+                <div class="table-container">
+                    <div class="table-header">
+                        <h3>Revenue Data (Last 6 Months)</h3>
+                        <a href="#" class="btn-add-new" style="background-color: #3498db;">Export as CSV</a>
+                    </div>
+                    
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Month</th>
+                                <th>Electricity (Rs.)</th>
+                                <th>Water (Rs.)</th>
+                                <th>Gas (Rs.)</th>
+                                <th>Total Revenue (Rs.)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>May 2025</td>
+                                <td>1,800,000</td>
+                                <td>300,000</td>
+                                <td>150,000</td>
+                                <td>2,250,000</td>
+                            </tr>
+                            <tr>
+                                <td>June 2025</td>
+                                <td>1,750,000</td>
+                                <td>290,000</td>
+                                <td>145,000</td>
+                                <td>2,185,000</td>
+                            </tr>
+                            <tr>
+                                <td>July 2025</td>
+                                <td>1,900,000</td>
+                                <td>310,000</td>
+                                <td>155,000</td>
+                                <td>2,365,000</td>
+                            </tr>
+                            <tr>
+                                <td>August 2025</td>
+                                <td>1,850,000</td>
+                                <td>305,000</td>
+                                <td>152,000</td>
+                                <td>2,307,000</td>
+                            </tr>
+                            <tr>
+                                <td>September 2025</td>
+                                <td>1,950,000</td>
+                                <td>320,000</td>
+                                <td>160,000</td>
+                                <td>2,430,000</td>
+                            </tr>
+                            <tr>
+                                <td>October 2025</td>
+                                <td>2,100,000</td>
+                                <td>350,000</td>
+                                <td>175,000</td>
+                                <td>2,625,000</td>
+                            </tr>
+                            <tr style="background-color: #f4f7f6; font-weight: bold;">
+                                <td>Total</td>
+                                <td>11,350,000</td>
+                                <td>1,875,000</td>
+                                <td>937,000</td>
+                                <td>14,162,000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+            </div>
+        </main>
+    </div>
+</body>
+</html>

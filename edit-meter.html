@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Meter - UMS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        
+        <!-- --- Sidebar Navigation --- -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h3>UMS Admin</h3>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="admin-dashboard.html" class="nav-item">Dashboard</a>
+                <a href="customer-management.html" class="nav-item">Customer Management</a>
+                <a href="meter-management.html" class="nav-item active">Meter Management</a>
+                <a href="tariff-plans.html" class="nav-item">Tariff Plans</a>
+                <a href="admin-billing.html" class="nav-item">Billing & Payments</a>
+                <a href="manager-dashboard.html" class="nav-item">Reports</a>
+                <a href="login.html" class="nav-item">Logout</a>
+            </nav>
+        </aside>
+
+        <!-- --- Main Content Area --- -->
+        <main class="main-content">
+            <header class="main-header">
+                <h1>Edit Meter Details</h1>
+                <div class="user-profile">
+                    <span>Admin Staff</span>
+                </div>
+            </header>
+
+            <div class="content-area">
+                
+                <div class="form-container">
+                    <h3>Update Meter: MTR-E-001</h3>
+                    <p>Modify the details for this meter and its assignment.</p>
+                    
+                    <form class="data-form">
+                        <div class="form-grid">
+                            
+                            <div class="input-group">
+                                <label for="customer-id">Select Customer</label>
+                                <select id="customer-id" name="customer-id" required>
+                                    <!-- "CUST-001" is selected -->
+                                    <option value="CUST-001" selected>CUST-001: John Doe</option>
+                                    <option value="CUST-002">CUST-002: ABC Holdings PLC</option>
+                                    <option value="CUST-003">CUST-003: Ministry of Education</option>
+                                </select>
+                            </div>
+
+                            <div class="input-group">
+                                <label for="meter-id">Meter ID / Serial Number</label>
+                                <!-- Pre-filled and read-only -->
+                                <input type="text" id="meter-id" name="meter-id" value="MTR-E-001" readonly class="readonly-input">
+                            </div>
+
+                            <div class="input-group">
+                                <label for="utility-type">Utility Type</label>
+                                <select id="utility-type" name="utility-type" required>
+                                    <!-- "electricity" is selected -->
+                                    <option value="electricity" selected>Electricity</option>
+                                    <option value="water">Water</option>
+                                    <option value="gas">Gas</option>
+                                </select>
+                            </div>
+                            
+                            <div class="input-group">
+                                <label for="status">Status</label>
+                                <select id="status" name="status" required>
+                                    <!-- "active" is selected -->
+                                    <option value="active" selected>Active</option>
+                                    <option value="pending">Pending Install</option>
+                                    <option value="inactive">Inactive</option>
+                                </select>
+                            </div>
+
+                            <div class="input-group form-span-2">
+                                <label for="location">Location / Service Address</label>
+                                <input type="text" id="location" name="location" 
+                                       value="123 Galle Rd, Colombo 03" 
+                                       placeholder="e.g., 123 Galle Rd, Colombo 03">
+                            </div>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="submit" class="submit-button">Update Meter</button>
+                            <!-- We can reuse the .btn-delete style we made -->
+                            <button type="button" class="btn-delete" style="margin-left: 10px;">Delete Meter</button>
+                        </div>
+                    </form>
+                </div>
+                
+            </div>
+        </main>
+    </div>
+</body>
+</html>

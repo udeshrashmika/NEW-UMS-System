@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Defaulters List - UMS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        
+        <!-- --- Sidebar Navigation (Manager) --- -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h3>UMS Manager</h3>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="manager-dashboard.html" class="nav-item">Reports Dashboard</a>
+                <a href="revenue-trends.html" class="nav-item">Revenue Trends</a>
+                <a href="defaulters-list.html" class="nav-item active">Defaulters List</a>
+                <a href="usage-patterns.html" class="nav-item">Usage Patterns</a>
+                <a href="login.html" class="nav-item">Logout</a>
+            </nav>
+        </aside>
+
+        <!-- --- Main Content Area --- -->
+        <main class="main-content">
+            <header class="main-header">
+                <h1>Defaulters Report</h1>
+                <div class="user-profile">
+                    <span>Decision Maker</span>
+                </div>
+            </header>
+
+            <div class="content-area">
+
+                <!-- Data table with the defaulters list -->
+                <div class="table-container">
+                    <div class="table-header">
+                        <h3>All Customers with Unpaid Bills</h3>
+                        <a href="#" class="btn-add-new" style="background-color: #3498db;">Export as CSV</a>
+                    </div>
+                    
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Customer ID</th>
+                                <th>Customer Name</th>
+                                <th>Phone Number</th>
+                                <th>Customer Type</th>
+                                <th>Unpaid Bills</th>
+                                <th>Total Due (Rs.)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>CUST-001</td>
+                                <td>John Doe</td>
+                                <td>+94771234567</td>
+                                <td>Household</td>
+                                <td>1</td>
+                                <td>3,450.00</td>
+                            </tr>
+                            <tr>
+                                <td>CUST-002</td>
+                                <td>ABC Holdings PLC</td>
+                                <td>+94112555888</td>
+                                <td>Business</td>
+                                <td>2</td>
+                                <td>112,700.00</td>
+                            </tr>
+                            <tr>
+                                <td>CUST-003</td>
+                                <td>Ministry of Education</td>
+                                <td>+94112785141</td>
+                                <td>Government</td>
+                                <td>1</td>
+                                <td>150,000.00</td>
+                            </tr>
+                            <tr>
+                                <td>CUST-015</td>
+                                <td>K. Perera</td>
+                                <td>+94719876543</td>
+                                <td>Household</td>
+                                <td>3</td>
+                                <td>8,900.00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+            </div>
+        </main>
+    </div>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manager Dashboard - UMS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h3>UMS Manager</h3>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="manager-dashboard.html" class="nav-item active">Reports Dashboard</a>
+                <a href="revenue-trends.html" class="nav-item">Revenue Trends</a>
+                <a href="defaulters-list.html" class="nav-item">Defaulters List</a>
+                <a href="usage-patterns.html" class="nav-item">Usage Patterns</a>
+                <a href="login.html" class="nav-item">Logout</a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="main-header">
+                <h1>Welcome, Manager</h1>
+                <div class="user-profile">
+                    <span>Decision Maker</span>
+                </div>
+            </header>
+
+            <div class="content-area">
+                
+                <div class="form-container">
+                    <h3>Generate Report</h3>
+                    <p>Select a report type and date range to analyze system data.</p>
+                    
+                    <form class="data-form">
+                        <div class="form-grid" style="grid-template-columns: 2fr 1fr 1fr;">
+                            
+                            <div class="input-group">
+                                <label for="report-type">Report Type</label>
+                                <select id="report-type" name="report-type" required>
+                                    <option value="revenue">Revenue Collections</option>
+                                    <option value="defaulters">Defaulters (Unpaid Bills)</option>
+                                    <option value="usage">Top Consumers / Usage Patterns</option>
+                                </select>
+                            </div>
+
+                            <div class="input-group">
+                                <label for="start-date">Start Date</label>
+                                <input type="date" id="start-date" name="start-date" required>
+                            </div>
+
+                            <div class="input-group">
+                                <label for="end-date">End Date</label>
+                                <input type="date" id="end-date" name="end-date" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="submit" class="submit-button">Generate Report</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div style="height: 30px;"></div>
+
+                <div class="table-container">
+                    <div class="table-header">
+                        <h3>Report: Revenue Collections (Sample)</h3>
+                        <a href="#" class="btn-add-new" style="background-color: #3498db;">Export as CSV</a>
+                    </div>
+                    
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Utility</th>
+                                <th>Payments Received</th>
+                                <th>Total (Rs.)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2025-11-01</td>
+                                <td>Electricity</td>
+                                <td>150</td>
+                                <td>750,000.00</td>
+                            </tr>
+                            <tr>
+                                <td>2025-11-01</td>
+                                <td>Water</td>
+                                <td>120</td>
+                                <td>120,000.00</td>
+                            </tr>
+                            <tr>
+                                <td colspan="3" style="font-weight: bold; text-align: right;">Total Revenue:</td>
+                                <td style="font-weight: bold;">870,000.00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+            </div>
+        </main>
+    </div>
+</body>
+</html>

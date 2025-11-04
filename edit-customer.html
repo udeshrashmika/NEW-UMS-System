@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Customer - UMS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        
+        <!-- --- Sidebar Navigation (Admin) --- -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h3>UMS Admin</h3>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="admin-dashboard.html" class="nav-item">Dashboard</a>
+                <a href="customer-management.html" class="nav-item active">Customer Management</a>
+                <a href="meter-management.html" class="nav-item">Meter Management</a>
+                <a href="tariff-plans.html" class="nav-item">Tariff Plans</a>
+                <a href="admin-billing.html" class="nav-item">Billing & Payments</a>
+                <a href="manager-dashboard.html" class="nav-item">Reports</a>
+                <a href="login.html" class="nav-item">Logout</a>
+            </nav>
+        </aside>
+
+        <!-- --- Main Content Area --- -->
+        <main class="main-content">
+            <header class="main-header">
+                <h1>Edit Customer (CUST-001)</h1>
+                <div class="user-profile">
+                    <span>Admin Staff</span>
+                </div>
+            </header>
+
+            <div class="content-area">
+                
+                <div class="form-container">
+                    <h3>Update Customer Details</h3>
+                    <p>Modify the customer's information and click "Save Changes".</p>
+                    
+                    <form class="data-form">
+                        <div class="form-grid">
+                            
+                            <div class="input-group">
+                                <label for="customer-name">Full Name / Organization</label>
+                                <!-- Pre-filled value -->
+                                <input type="text" id="customer-name" name="customer-name" 
+                                       value="John Doe" required>
+                            </div>
+                            
+                            <div class="input-group">
+                                <label for="customer-type">Customer Type</label>
+                                <select id="customer-type" name="customer-type" required>
+                                    <!-- Pre-selected value -->
+                                    <option value="household" selected>Household</option>
+                                    <option value="business">Business</option>
+                                    <option value="government">Government Organization</option>
+                                </select>
+                            </div>
+
+                            <div class="input-group">
+                                <label for="email">Email Address</label>
+                                <!-- Pre-filled value -->
+                                <input type="email" id="email" name="email" 
+                                       value="john.doe@example.com">
+                            </div>
+
+                            <div class="input-group">
+                                <label for="phone">Phone Number</label>
+                                <!-- Pre-filled value -->
+                                <input type="tel" id="phone" name="phone" 
+                                       value="+94771234567" required>
+                            </div>
+
+                            <div class="input-group form-span-2">
+                                <label for="service-address">Service Address</label>
+                                <!-- Pre-filled value -->
+                                <input type="text" id="service-address" name="service-address" 
+                                       value="123 Galle Rd, Colombo 03" required>
+                            </div>
+
+                            <div class="input-group form-span-2">
+                                <label for="billing-address">Billing Address (if different)</label>
+                                <!-- Pre-filled value -->
+                                <input type="text" id="billing-address" name="billing-address" 
+                                       value="">
+                            </div>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <!-- New button style for "Delete" -->
+                            <button type="button" class="submit-button delete-button">Delete Customer</button>
+                            <button type="submit" class="submit-button">Save Changes</button>
+                        </div>
+                    </form>
+                </div>
+                
+            </div>
+        </main>
+    </div>
+</body>
+</html>

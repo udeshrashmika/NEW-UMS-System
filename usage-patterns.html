@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usage Patterns - UMS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        
+        <!-- --- Sidebar Navigation (Manager) --- -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h3>UMS Manager</h3>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="manager-dashboard.html" class="nav-item">Reports Dashboard</a>
+                <a href="revenue-trends.html" class="nav-item">Revenue Trends</a>
+                <a href="defaulters-list.html" class="nav-item">Defaulters List</a>
+                <a href="usage-patterns.html" class="nav-item active">Usage Patterns</a>
+                <a href="login.html" class="nav-item">Logout</a>
+            </nav>
+        </aside>
+
+        <!-- --- Main Content Area --- -->
+        <main class="main-content">
+            <header class="main-header">
+                <h1>Usage Patterns & Top Consumers</h1>
+                <div class="user-profile">
+                    <span>Decision Maker</span>
+                </div>
+            </header>
+
+            <div class="content-area">
+                
+                <!-- Chart placeholder -->
+                <div class="chart-container">
+                    <h3>Top 5 Consumers (Electricity - Last 30 Days)</h3>
+                    <!-- This is a placeholder image for the chart -->
+                    <img src="https://placehold.co/900x400/2ecc71/white?text=Top+Consumers+Bar+Chart" 
+                         alt="Top Consumers Chart Placeholder">
+                </div>
+
+                <!-- Spacer -->
+                <div style="height: 30px;"></div>
+
+                <!-- Data table with the chart's data -->
+                <div class="table-container">
+                    <div class="table-header">
+                        <h3>Consumption Data (Last 30 Days)</h3>
+                        <a href="#" class="btn-add-new" style="background-color: #3498db;">Export as CSV</a>
+                    </div>
+                    
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Rank</th>
+                                <th>Customer ID</th>
+                                <th>Customer Name</th>
+                                <th>Utility</th>
+                                <th>Consumption</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>CUST-003</td>
+                                <td>Ministry of Education</td>
+                                <td>Electricity</td>
+                                <td>5,000 kWh</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>CUST-002</td>
+                                <td>ABC Holdings PLC</td>
+                                <td>Electricity</td>
+                                <td>2,600 kWh</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>CUST-025</td>
+                                <td>Kandy City Center</td>
+                                <td>Electricity</td>
+                                <td>2,200 kWh</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>CUST-002</td>
+                                <td>ABC Holdings PLC</td>
+                                <td>Water</td>
+                                <td>1,800 m³</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>CUST-088</td>
+                                <td>Royal Hospital</td>
+                                <td>Water</td>
+                                <td>1,500 m³</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+            </div>
+        </main>
+    </div>
+</body>
+</html>
