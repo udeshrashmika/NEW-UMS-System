@@ -15,7 +15,17 @@ CREATE TABLE Customer (
 );
 GO
 
-    CREATE TABLE User_Staff (
+
+-- 2. Create Table Utility_Type
+CREATE TABLE Utility_Type (
+    UtilityID VARCHAR(10) PRIMARY KEY,
+    UtilityName VARCHAR(50) NOT NULL,
+    Unit VARCHAR(10) NOT NULL
+);
+
+USE UMS_DATABASE;
+
+CREATE TABLE User_Staff (
     UserID NVARCHAR(20) PRIMARY KEY NOT NULL,         
     Username NVARCHAR(50) UNIQUE NOT NULL,            
     Password NVARCHAR(255) NOT NULL,                  
@@ -24,15 +34,25 @@ GO
     CONSTRAINT CHK_UserRole CHECK (Role IN ('Admin', 'FieldOfficer', 'Cashier', 'Manager'))
 );
 GO
+--Meter_Reading--
+USE UMS_DATABASE;
 
-
-CREATE TABLE Utility_Type (
-    UtilityID VARCHAR(10) PRIMARY KEY,
-    UtilityName VARCHAR(50) NOT NULL,
-    Unit VARCHAR(10) NOT NULL
+CREATE TABLE Meter_Reading (
+    ReadingID NVARCHAR(20) PRIMARY KEY NOT NULL,   
+    MeterID NVARCHAR(20) NOT NULL,                 
+    UserID NVARCHAR(20) NOT NULL,                  
+    ReadingValue DECIMAL(10, 2) NOT NULL,          
+    ReadingDate DATE NOT NULL,                     
+    Notes NVARCHAR(255) NULL,                      -
+    
+    -- Foreign key constraints
+    CONSTRAINT FK_MeterReading_Meter FOREIGN KEY (MeterID)
+        REFERENCES Meter(MeterID),
+    
+    CONSTRAINT FK_MeterReading_UserStaff FOREIGN KEY (UserID)
+        REFERENCES User_Staff(UserID)
 );
 GO
-
 
 
 
