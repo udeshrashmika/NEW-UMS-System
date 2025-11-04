@@ -16,15 +16,12 @@ CREATE TABLE Customer (
 GO
 
 
-CREATE TABLE User_Staff (
-    UserID NVARCHAR(20) PRIMARY KEY NOT NULL,         
-    Username NVARCHAR(50) UNIQUE NOT NULL,            
-    Password NVARCHAR(255) NOT NULL,                  
-    FullName NVARCHAR(100) NOT NULL,                  
-    Role NVARCHAR(20) NOT NULL,                       
-    CONSTRAINT CHK_UserRole CHECK (Role IN ('Admin', 'FieldOfficer', 'Cashier', 'Manager'))
+-- 2. Create Table Utility_Type
+CREATE TABLE Utility_Type (
+    UtilityID VARCHAR(10) PRIMARY KEY,
+    UtilityName VARCHAR(50) NOT NULL,
+    Unit VARCHAR(10) NOT NULL
 );
-GO
 
 
 
