@@ -15,6 +15,7 @@ CREATE TABLE Customer (
 );
 GO
 
+
 -- 2. Create Table Utility_Type
 CREATE TABLE Utility_Type (
     UtilityID VARCHAR(10) PRIMARY KEY,
