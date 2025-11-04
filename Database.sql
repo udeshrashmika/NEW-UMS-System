@@ -35,16 +35,28 @@ CREATE TABLE User_Staff (
 );
 GO
 
-CREATE TABLE Meter (
-    MeterID VARCHAR(15) PRIMARY KEY,
-    CustomerID VARCHAR(10),
-    UtilityID VARCHAR(10),
-    Status VARCHAR(20),
-    Location VARCHAR(50),
-    InstallDate DATE,
-    FOREIGN KEY (CustomerID) REFERENCES Customer(CustomerID),
-    FOREIGN KEY (UtilityID) REFERENCES Utility_Type(UtilityID)
+
+    ---- Meter_Reading
+USE UMS_DATABASE;
+
+CREATE TABLE Meter_Reading (
+    ReadingID NVARCHAR(20) PRIMARY KEY NOT NULL,   
+    MeterID NVARCHAR(20) NOT NULL,                 
+    UserID NVARCHAR(20) NOT NULL,                  
+    ReadingValue DECIMAL(10, 2) NOT NULL,          
+    ReadingDate DATE NOT NULL,                     
+    Notes NVARCHAR(255) NULL,                      
+    
+    -- Foreign key constraints
+    CONSTRAINT FK_MeterReading_Meter FOREIGN KEY (MeterID)
+        REFERENCES Meter(MeterID),
+    
+    CONSTRAINT FK_MeterReading_UserStaff FOREIGN KEY (UserID)
+        REFERENCES User_Staff(UserID)
 );
+GO
+
+
 
 
 
