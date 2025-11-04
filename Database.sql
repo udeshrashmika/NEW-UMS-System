@@ -14,7 +14,7 @@ CREATE TABLE Customer (
     CONSTRAINT CHK_CustomerType CHECK (CustomerType IN ('Household', 'Business', 'Government'))
 );
 GO
-USE UMS_DATABASE;
+
 
 CREATE TABLE User_Staff (
     UserID NVARCHAR(20) PRIMARY KEY NOT NULL,         
