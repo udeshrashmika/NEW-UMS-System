@@ -199,7 +199,6 @@ VALUES
 ('BILL-1048', 'CSH-001', 1500.00, '2025-10-22 14:30:00', 'Cash');
 GO
 
-PRINT '*** UMS_NSBM Database Created Successfully ***';
-PRINT '*** All Tables and Sample Data Inserted ***';
+
 
 
