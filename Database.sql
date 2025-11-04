@@ -23,7 +23,7 @@ CREATE TABLE Utility_Type (
     Unit VARCHAR(10) NOT NULL
 );
 
-USE UMS_DATABASE;
+
 
 CREATE TABLE User_Staff (
     UserID NVARCHAR(20) PRIMARY KEY NOT NULL,         
@@ -34,6 +34,7 @@ CREATE TABLE User_Staff (
     CONSTRAINT CHK_UserRole CHECK (Role IN ('Admin', 'FieldOfficer', 'Cashier', 'Manager'))
 );
 GO
+
 
 CREATE TABLE Meter (
     MeterID VARCHAR(15) PRIMARY KEY,
