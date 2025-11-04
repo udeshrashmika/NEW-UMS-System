@@ -35,10 +35,6 @@ CREATE TABLE User_Staff (
 );
 GO
 
-
-    ---- Meter_Reading
-USE UMS_DATABASE;
-
 CREATE TABLE Meter_Reading (
     ReadingID NVARCHAR(20) PRIMARY KEY NOT NULL,   
     MeterID NVARCHAR(20) NOT NULL,                 
